@@ -1,19 +1,17 @@
  package javaPrograms;
-
- import java.util.Scanner;
-
+ 
  public class FlipCoin{
    public static void main(String [] args) {
      int tail = 0;  
      int head = 0;
-     Scanner input = new Scanner(System.in);
+
      System.out.println("Enter a number: ");
-     int myNum = input.nextInt();
-     double copyNum = myNum;  //to calculate percentage
+     int myNum = Utility.getUserSpecificInteger();
+     double copyNum = myNum;  
      if(myNum > 0){
        for(int i=myNum ; i>0 ; i--){
-         double myVar = Math.random();   //gives random value between 0 to 1
-         if(myVar<0.5){
+         double randomValue = Utility.getRandomDouble();   
+         if(randomValue<0.5){
            tail = tail + 1;
          }else{
            head = head + 1;
