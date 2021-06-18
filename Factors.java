@@ -1,20 +1,21 @@
 package javaPrograms;
 
-import java.util.Scanner;
 public class Factors{
-  public static void main(String [] args){
-    Scanner scan = new Scanner(System.in);
-    System.out.print("Enter a positive number: ");
-    int num = scan.nextInt();
+	public static void main(String args[]){
+	      
+	      
+	      System.out.println("Enter a number ::");
+	      int number = Utility.getUserSpecificInteger();
+	      
+	      for(int i = 2; i< number; i++) {
+	         while(number % i == 0) {
+	            System.out.println(i+" ");
+	            number = number/i;
+	         }
+	      }
+	      if(number >2) {
+	         System.out.println(number);
+	      }
+	   }
 
-    if(num == 0){
-        System.out.println("Factorial of 0 is 1");
-    }else if(num > 0){
-      int result = 1;
-      for(int i=num ; i>=1 ; i--){
-        result = result * i;
-      }
-      System.out.println("Factorial of "+num+" is: " +result);
-    }
-  }
 }
